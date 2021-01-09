@@ -14,7 +14,7 @@ from tg_bot import dispatcher, SUDO_USERS, LOGGER
 from tg_bot.modules.disable import DisableAbleCommandHandler
 from tg_bot.modules.helper_funcs.chat_status import can_delete, is_user_admin, user_not_admin, user_admin, \
     bot_can_delete, is_bot_admin
-from tg_bot.modules.log_channel import loggable
+
 from tg_bot.modules.sql import users_sql
 
 LOCK_TYPES = {'sticker': Filters.sticker,
@@ -97,7 +97,7 @@ def locktypes(bot: Bot, update: Update):
 
 @user_admin
 @bot_can_delete
-@loggable
+
 def lock(bot: Bot, update: Update, args: List[str]) -> str:
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -138,7 +138,7 @@ def lock(bot: Bot, update: Update, args: List[str]) -> str:
 
 @run_async
 @user_admin
-@loggable
+
 def unlock(bot: Bot, update: Update, args: List[str]) -> str:
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
