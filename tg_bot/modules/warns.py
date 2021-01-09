@@ -17,7 +17,7 @@ from tg_bot.modules.helper_funcs.extraction import extract_text, extract_user_an
 from tg_bot.modules.helper_funcs.filters import CustomFilters
 from tg_bot.modules.helper_funcs.misc import split_message
 from tg_bot.modules.helper_funcs.string_handling import split_quotes
-from tg_bot.modules.log_channel import loggable
+
 from tg_bot.modules.sql import warns_sql as sql
 
 WARN_HANDLER_GROUP = 9
@@ -95,7 +95,7 @@ def warn(user: User, chat: Chat, reason: str, message: Message, warner: User = N
 @run_async
 @user_admin_no_reply
 @bot_admin
-@loggable
+
 def button(bot: Bot, update: Update) -> str:
     query = update.callback_query  # type: Optional[CallbackQuery]
     user = update.effective_user  # type: Optional[User]
@@ -127,7 +127,7 @@ def button(bot: Bot, update: Update) -> str:
 @run_async
 @user_admin
 @can_restrict
-@loggable
+
 def warn_user(bot: Bot, update: Update, args: List[str]) -> str:
     message = update.effective_message  # type: Optional[Message]
     chat = update.effective_chat  # type: Optional[Chat]
@@ -148,7 +148,7 @@ def warn_user(bot: Bot, update: Update, args: List[str]) -> str:
 @run_async
 @user_admin
 @bot_admin
-@loggable
+
 def reset_warns(bot: Bot, update: Update, args: List[str]) -> str:
     message = update.effective_message  # type: Optional[Message]
     chat = update.effective_chat  # type: Optional[Chat]
@@ -285,7 +285,7 @@ def list_warn_filters(bot: Bot, update: Update):
 
 
 @run_async
-@loggable
+
 def reply_filter(bot: Bot, update: Update) -> str:
     chat = update.effective_chat  # type: Optional[Chat]
     message = update.effective_message  # type: Optional[Message]
