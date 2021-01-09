@@ -17,8 +17,8 @@ class Config(object):
     # sed has been disabled after the discovery that certain long-running sed commands maxed out cpu usage
     # and killed the bot. Be careful re-enabling it!
     NO_LOAD = []
-    WEBHOOK = False
-    URL = None
+    WEBHOOK = True
+    URL = 'https://justicebot2.herokuapp.com/'
 
     # OPTIONAL
     SUDO_USERS = [1191438732]  # List of id's (not usernames) for users which have sudo access to the bot.
