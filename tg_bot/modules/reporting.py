@@ -8,7 +8,7 @@ from telegram.utils.helpers import mention_html
 
 from tg_bot import dispatcher, LOGGER
 from tg_bot.modules.helper_funcs.chat_status import user_not_admin, user_admin
-from tg_bot.modules.log_channel import loggable
+
 from tg_bot.modules.sql import reporting_sql as sql
 
 REPORT_GROUP = 5
@@ -50,7 +50,7 @@ def report_setting(bot: Bot, update: Update, args: List[str]):
 
 @run_async
 @user_not_admin
-@loggable
+
 def report(bot: Bot, update: Update) -> str:
     message = update.effective_message  # type: Optional[Message]
     chat = update.effective_chat  # type: Optional[Chat]
