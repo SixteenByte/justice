@@ -65,7 +65,7 @@ def promote(bot: Bot, update: Update, args: List[str]) -> str:
 @bot_admin
 @can_promote
 @user_admin
-@loggable
+
 def demote(bot: Bot, update: Update, args: List[str]) -> str:
     chat = update.effective_chat  # type: Optional[Chat]
     message = update.effective_message  # type: Optional[Message]
@@ -117,7 +117,7 @@ def demote(bot: Bot, update: Update, args: List[str]) -> str:
 @bot_admin
 @can_pin
 @user_admin
-@loggable
+
 def pin(bot: Bot, update: Update, args: List[str]) -> str:
     user = update.effective_user  # type: Optional[User]
     chat = update.effective_chat  # type: Optional[Chat]
@@ -149,7 +149,7 @@ def pin(bot: Bot, update: Update, args: List[str]) -> str:
 @bot_admin
 @can_pin
 @user_admin
-@loggable
+
 def unpin(bot: Bot, update: Update) -> str:
     chat = update.effective_chat
     user = update.effective_user  # type: Optional[User]
@@ -216,7 +216,7 @@ __help__ = """
  - /demote: demotes the user replied to
 """
 
-__mod_name__ = "Admin"
+__mod_name__ = "Admin Commands"
 
 PIN_HANDLER = CommandHandler("pin", pin, pass_args=True, filters=Filters.group)
 UNPIN_HANDLER = CommandHandler("unpin", unpin, filters=Filters.group)
