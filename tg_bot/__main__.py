@@ -21,7 +21,7 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 PM_START_TEXT = """
 Hi {}, my name is {}! If you have any questions on how to use me, read /help 
 I basically guard telegram and fight spam and spammers!
-You can report a spammer / scammer at my [support group](t.me/six13bit)
+You can report a spammer / scammer at my support group!!
 """
 
 HELP_STRINGS = """
