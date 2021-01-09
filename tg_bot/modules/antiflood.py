@@ -8,14 +8,14 @@ from telegram.utils.helpers import mention_html
 
 from tg_bot import dispatcher
 from tg_bot.modules.helper_funcs.chat_status import is_user_admin, user_admin, can_restrict
-from tg_bot.modules.log_channel import loggable
+
 from tg_bot.modules.sql import antiflood_sql as sql
 
 FLOOD_GROUP = 3
 
 
 @run_async
-@loggable
+
 def check_flood(bot: Bot, update: Update) -> str:
     user = update.effective_user  # type: Optional[User]
     chat = update.effective_chat  # type: Optional[Chat]
@@ -55,7 +55,7 @@ def check_flood(bot: Bot, update: Update) -> str:
 @run_async
 @user_admin
 @can_restrict
-@loggable
+
 def set_flood(bot: Bot, update: Update, args: List[str]) -> str:
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
