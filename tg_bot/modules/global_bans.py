@@ -283,14 +283,14 @@ def __chat_settings__(chat_id, user_id):
 
 __help__ = """
 *Admin only:*
- - /gbanstat <on/off/yes/no>: Will disable the effect of global bans on your group, or return your current settings.
+ - /jbanstat <on/off/yes/no>: Will disable the effect of global bans on your group, or return your current settings.
 
 Gbans, also known as global bans, are used by the bot owners to ban spammers across all groups. This helps protect \
 you and your groups by removing spam flooders as quickly as possible. They can be disabled for you group by calling \
 /gbanstat
 """
 
-__mod_name__ = "Global Bans"
+__mod_name__ = "Justice Bans"
 
 GBAN_HANDLER = CommandHandler("jban", gban, pass_args=True,
                               filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
