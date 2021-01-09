@@ -18,7 +18,7 @@ from tg_bot.modules.helper_funcs.extraction import extract_user
 @bot_admin
 @can_promote
 @user_admin
-@loggable
+
 def promote(bot: Bot, update: Update, args: List[str]) -> str:
     chat_id = update.effective_chat.id
     message = update.effective_message  # type: Optional[Message]
