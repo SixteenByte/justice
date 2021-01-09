@@ -306,7 +306,7 @@ def reply_filter(bot: Bot, update: Update) -> str:
 
 @run_async
 @user_admin
-@loggable
+
 def set_warn_limit(bot: Bot, update: Update, args: List[str]) -> str:
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
