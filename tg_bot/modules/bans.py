@@ -12,14 +12,14 @@ from tg_bot.modules.helper_funcs.chat_status import bot_admin, user_admin, is_us
     is_user_admin, is_user_in_chat
 from tg_bot.modules.helper_funcs.extraction import extract_user_and_text
 from tg_bot.modules.helper_funcs.string_handling import extract_time
-from tg_bot.modules.log_channel import loggable
+
 
 
 @run_async
 @bot_admin
 @can_restrict
 @user_admin
-@loggable
+
 def ban(bot: Bot, update: Update, args: List[str]) -> str:
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -82,7 +82,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
 @bot_admin
 @can_restrict
 @user_admin
-@loggable
+
 def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -164,7 +164,7 @@ def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
 @bot_admin
 @can_restrict
 @user_admin
-@loggable
+
 def kick(bot: Bot, update: Update, args: List[str]) -> str:
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -234,7 +234,7 @@ def kickme(bot: Bot, update: Update):
 @bot_admin
 @can_restrict
 @user_admin
-@loggable
+
 def unban(bot: Bot, update: Update, args: List[str]) -> str:
     message = update.effective_message  # type: Optional[Message]
     user = update.effective_user  # type: Optional[User]
