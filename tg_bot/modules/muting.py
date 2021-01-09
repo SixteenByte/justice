@@ -11,13 +11,13 @@ from tg_bot import dispatcher, LOGGER
 from tg_bot.modules.helper_funcs.chat_status import bot_admin, user_admin, is_user_admin, can_restrict
 from tg_bot.modules.helper_funcs.extraction import extract_user, extract_user_and_text
 from tg_bot.modules.helper_funcs.string_handling import extract_time
-from tg_bot.modules.log_channel import loggable
+
 
 
 @run_async
 @bot_admin
 @user_admin
-@loggable
+
 def mute(bot: Bot, update: Update, args: List[str]) -> str:
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -59,7 +59,7 @@ def mute(bot: Bot, update: Update, args: List[str]) -> str:
 @run_async
 @bot_admin
 @user_admin
-@loggable
+
 def unmute(bot: Bot, update: Update, args: List[str]) -> str:
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -106,7 +106,7 @@ def unmute(bot: Bot, update: Update, args: List[str]) -> str:
 @bot_admin
 @can_restrict
 @user_admin
-@loggable
+
 def temp_mute(bot: Bot, update: Update, args: List[str]) -> str:
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
