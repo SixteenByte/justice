@@ -18,7 +18,7 @@ class Config(object):
     # and killed the bot. Be careful re-enabling it!
     NO_LOAD = []
     WEBHOOK = false
-    URL = 
+    URL = ''
 
     # OPTIONAL
     SUDO_USERS = [1191438732]  # List of id's (not usernames) for users which have sudo access to the bot.
