@@ -17,7 +17,7 @@ class Config(object):
     # sed has been disabled after the discovery that certain long-running sed commands maxed out cpu usage
     # and killed the bot. Be careful re-enabling it!
     NO_LOAD = []
-    WEBHOOK = false
+    WEBHOOK = False
     URL = ''
 
     # OPTIONAL
